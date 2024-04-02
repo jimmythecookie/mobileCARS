@@ -311,26 +311,26 @@ ul, li, a {
   }
 
   .logo {
-    width: 40px; 
+    width: 60px; 
     height: auto;
   }
 
 
   .mainContentSection h1, .mainContentSection h2, .mainContentSection p {
-    font-size: 9px; 
+    font-size: 14px; 
     padding: 3px; 
   }
 
 
   .fan-art-gallery img {
-    max-width: 100%;
+    max-width: 60%;
     height: auto;
   }
 
   .genericButton {
     display: block;
-    width: 100%;
-    margin: 10px 0; /* Add some margin around buttons */
+    width: 80%;
+    margin: 10px 0;
   }
 
 
