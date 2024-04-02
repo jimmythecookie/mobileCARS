@@ -4,29 +4,49 @@ font-family: 'Pixar', sans-serif;
 color: #ffb; /*general background of everything */
 }
 
- /* Base styles for desktop */
-.nav, .mainContentSection, .fan-art-gallery, .quiz-button-container {
-  /* Your existing CSS rules */
-}
 
-/* Mobile styles */
-@media (max-width: 768px) {
-  .nav ul {
+
+@media only screen and (max-width: 414px) {
+
+  
+  nav ul {
+    display: flex;
     flex-direction: column;
-    margin: 0;
     padding: 0;
   }
 
-  .nav ul li {
+  nav ul li {
+    display: block;
+    width: 100%;
     text-align: center;
-    padding: 10px;
   }
 
-  .mainContentSection, .fan-art-gallery, .quiz-button-container {
-    padding: 10px;
+  .carshome, .mainContentSection, .fan-art-gallery, .video-container {
+    padding: 15px;
   }
 
-  /* Add more mobile-specific styles here */
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+
+  h1, h2, h3 {
+    font-size: 18px; 
+  }
+
+  
+  .fan-art-gallery div, .left-gallery, .right-gallery {
+    width: 100%; 
+  }
+
+  
+  .video-container iframe {
+    width: 100%; 
+    height: auto; 
+  }
+
 }
 
 #ff-compose {
