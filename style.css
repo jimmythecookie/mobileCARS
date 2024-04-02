@@ -4,51 +4,6 @@ font-family: 'Pixar', sans-serif;
 color: #ffb; /*general background of everything */
 }
 
-
-
-@media only screen and (max-width: 414px) {
-
-  
-  nav ul {
-    display: flex;
-    flex-direction: column;
-    padding: 0;
-  }
-
-  nav ul li {
-    display: block;
-    width: 100%;
-    text-align: center;
-  }
-
-  .carshome, .mainContentSection, .fan-art-gallery, .video-container {
-    padding: 15px;
-  }
-
-
-  img {
-    max-width: 100%;
-    height: auto;
-  }
-
-
-  h1, h2, h3 {
-    font-size: 18px; 
-  }
-
-  
-  .fan-art-gallery div, .left-gallery, .right-gallery {
-    width: 100%; 
-  }
-
-  
-  .video-container iframe {
-    width: 100%; 
-    height: auto; 
-  }
-
-}
-
 #ff-compose {
   background-color: black;
 }
@@ -56,6 +11,7 @@ body {
   padding: 0;
   margin: 0;
   background-color: black;
+  box-sizing: border-box;
          }   
 .carshome{ /*main home page design */
 min-height: 100vh;
@@ -69,6 +25,7 @@ background-attachment: fixed;
 padding: 0 8%;
 position: relative;
 z-index: 1;
+box-sizing: border-box;
 }
 
 /* PROF NOTE: From https://stackoverflow.com/a/77746563 */
@@ -309,4 +266,79 @@ select option {
   background: #000;
   margin-top: 50vh;
   padding: 400px 280px;
+}
+ul, li, a {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+.nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.nav li {
+  float: left;
+  display: inline-block;
+}
+
+.nav li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  text-decoration: none;
+}
+
+
+
+@media only screen and (max-width: 414px) {
+  .nav ul {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .nav li {
+    width: 100%;
+  }
+
+  .nav li a {
+    padding: 10px;
+    text-align: center;
+  }
+
+  .logo {
+    width: 20px; /* Adjust logo size */
+    height: auto;
+  }
+
+  /* Adjust the main content font sizes and padding */
+  .mainContentSection h1, .mainContentSection h2, .mainContentSection p {
+    font-size: 9px; /* Adjust font size */
+    padding: 3px; /* Adjust padding */
+  }
+
+  /* Make images in the fan art gallery responsive */
+  .fan-art-gallery img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Make buttons full width */
+  .genericButton {
+    display: block;
+    width: 100%;
+    margin: 10px 0; /* Add some margin around buttons */
+  }
+
+  /* Adjust the iframe for smaller screens */
+  .bg-video {
+    width: 100%; /* Full width */
+    height: auto; /* Adjust height automatically */
+  }
+
+  /* Add more selectors and styles as needed for other elements */
 }
