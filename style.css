@@ -1,0 +1,292 @@
+* {
+  box-sizing: border-box;
+font-family: 'Pixar', sans-serif;
+color: #ffb; /*general background of everything */
+}
+
+ /* Base styles for desktop */
+.nav, .mainContentSection, .fan-art-gallery, .quiz-button-container {
+  /* Your existing CSS rules */
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .nav ul {
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav ul li {
+    text-align: center;
+    padding: 10px;
+  }
+
+  .mainContentSection, .fan-art-gallery, .quiz-button-container {
+    padding: 10px;
+  }
+
+  /* Add more mobile-specific styles here */
+}
+
+#ff-compose {
+  background-color: black;
+}
+body {
+  padding: 0;
+  margin: 0;
+  background-color: black;
+         }   
+.carshome{ /*main home page design */
+min-height: 100vh;
+width: 100%;
+/*background-color: #000;
+background-image: url('gallerycars.jpeg'); */
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+background-attachment: fixed;
+padding: 0 8%;
+position: relative;
+z-index: 1;
+}
+
+/* PROF NOTE: From https://stackoverflow.com/a/77746563 */
+.bg-video {
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-size: cover;
+  background: no-repeat center;
+  user-select: none;
+  pointer-events: none;
+
+  /*additional tweaks for positioning, read more in the link above*/
+  height: 100%;
+  width: 177.77777778vh; /* 100 * 16 / 9 */
+  min-width: 100%;
+  min-height: 56.25vw; /* 100 * 9 / 16 */
+  
+  z-index: -99; /* PROF NOTE: Pushing video to background */
+}
+
+
+h2{
+min-height: 100vh;
+width: 100%;
+background-color: #000;
+/*
+background-image: url('gallerycars.jpeg'); */
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+background-attachment: fixed;
+color: #ffb;
+}
+
+
+nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
+}
+.logo{
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* transition for transform and shadow */
+  box-shadow: 5px 5px 15px rgba(0,0,0,0.5); /* box-shadow not sure if this works but experimented and it looks like it works */
+  border-radius: 10px; 
+  display: inline-block; 
+  margin: 10px;
+  width: 160px;
+
+}
+nav a:hover .logo {
+  transform: scale(1.05); /* Slightly enlarges the logo on hover */
+  box-shadow: 0 0 20px rgba(0,0,0,0.75); /* More pronounced shadow on hover */
+}
+nav ul li{
+  display: inline-block;
+  list-style: none;
+  margin: 10px 100px;
+}
+nav ul li a{
+ transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth move to transform and shadow */
+  box-shadow: 3px 3px 8px rgba(0,0,0,0.3); /* Subtle shadow for a raised effect */
+  border-radius: 5px;
+  display: inline-block; /* more space and padding in my opinion */
+  margin: 5px;
+  padding: 10px 15px; /* Padding inside links for larger click areas */
+  background: rgba(255,255,255,0.8); /* think this would make it more readable */
+  color: #000;
+  text-decoration: none;
+}
+nav ul li a:hover {
+  transform: scale(1.10); /* Slightly enlarges the links on hover */
+  box-shadow: 0 0 15px rgba(0,0,0,0.5); /* experimented and I think this is the best so far */
+  background: rgba(255,255,255,1); /* inspired by other websites that use similar methods */
+}
+.carshome h1{
+  font-size: 70px;
+  margin-top: 15%;
+  color: #ffb;
+
+}
+.genericButton{ /*button for going to fun fact!*/
+  background: #393939;
+  border: 0;
+  outline: none;
+  padding: 15px 35px;
+  color: #fff;
+  margin-top:25px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.genericButton:hover {
+  background-color: #494949}
+
+h3 {
+  font-size: 4em;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 0.5em;
+}
+
+.funfactlist {
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+    padding: 70px;
+    border-radius: 10px;
+    margin: 0 auto; 
+    width: fit-content;
+    max-width: 90%; /
+    position: relative; 
+    z-index: 2; 
+}
+
+
+.funfactlist li {
+  margin-bottom: 10px;
+  text-align: left;
+  color: #115;
+  font-size: 280%;
+}
+
+
+.fan-art-gallery {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px;
+}
+
+.left-gallery, #ff-compose, .right-gallery {
+  flex: 1;
+}
+
+.left-gallery, .right-gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.left-gallery figure, .right-gallery figure {
+  margin: 0;
+  text-align: center;
+}
+
+
+.left-gallery figure img,
+.right-gallery figure img {
+    width: 100%; /* Adjust the width */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+    margin-bottom: 0.5rem;
+    border-radius: 140px;
+
+}
+
+/* Style for hovering over the images */
+.left-gallery figure img:hover,
+.right-gallery figure img:hover {
+    transform: translateY(-10px); /* Slightly raising the image */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.9); /* Enhance shadow */
+}
+
+/* caption */
+.left-gallery figure figcaption,
+.right-gallery figure figcaption {
+    text-align: center; /* Center the caption text */
+    margin-top: 0.5rem;
+}
+/* Styles for the quiz button */
+.quiz-button-container {
+    text-align: center; /* Centers the button*/
+    margin-top: 20px; /* Adds space above the button */
+}
+
+.quiz-button {
+    display: inline-block; /* Allows for width and height to be set */
+    background-color: #4CAF50; 
+    color: white; 
+    padding: 15px 30px;
+    font-size: 1.5em; 
+    text-decoration: none; /* Removes underline from links */
+    font-weight: bold; /* Makes the font bold */
+    border-radius: 10px; /* Slightly rounded corners */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); /* subtle shadow */
+    transition: all 0.3 ease; /* Smooth transition for hover effects */
+    margin-bottom: 20px;
+}
+
+.quiz-button:hover {
+    background-color: #45a049;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4); /* shadow on hover */
+    text-decoration: none; /* Removes underline from links */
+    transform: scale(1.05);
+    color: white;
+}
+
+/* Background image styling */
+.background-image {
+    position: absolute;
+    top: 10%;
+    left: 0;
+    width: 100%;
+    height: auto;
+    opacity: 1; /* transparency*/
+    z-index: -99; /* Ensure it's behind the content */
+    size: cover;
+
+}
+
+
+/* Quiz button styling */
+.quiz-button {
+    display: inline-block; /* For proper padding and margin */
+    margin-top: 10px; /* Space above the button */
+}
+
+/* Quiz dropdown selections */
+
+select option {
+  color: #000;
+}
+
+.video-container {
+ margin-top: 20px;
+ text-align: center;
+}
+.video-description {
+  font-size: 18px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.mainContentSection {
+  position: relative;
+  z-index: 2;
+  background: #000;
+  margin-top: 50vh;
+  padding: 400px 280px;
+}
